@@ -3,6 +3,14 @@
   <hr class="my-4">
   <app-dashboard-card [totalConfirmed]="totalConfirmed" [totalActive]="totalActive" [totalDeath]="totalDeath"
     [totalRecovered]="totalRecovered"></app-dashboard-card>
-  <google-chart [data]="pieChart"></google-chart>
+  <div class="row">
+    <hr>
+    <div class="col">
+      <google-chart [data]="pieChart"></google-chart>
+    </div>
+    <div class="col">
+      <google-chart [data]="columnChart"></google-chart>
+    </div>
+  </div>
 
 </div>
