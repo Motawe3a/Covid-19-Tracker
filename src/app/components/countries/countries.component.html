@@ -1,9 +1,14 @@
 <div class="jumbotron bg-white text-center">
   <h1 class="display-4">Corona Covid-19 Tracker Country Wise </h1>
-  <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore obcaecati reprehenderit ipsum
-    accusamus odio sed officiis in et harum. Tempore enim quia, earum quas odio modi non optio incidunt mollitia!</p>
-  <hr class="my-4">
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore obcaecati reprehenderit ipsum
-    accusamus
-    odio sed officiis in et harum. Tempore enim quia, earum quas odio modi non optio incidunt mollitia!</p>
+  <hr>
+  <div class="mx-auto">
+    <div class="form-group col-lg-5 mx-auto">
+      <label for="c">Select Country</label>
+      <select name="" class="form-control" id="c" #input (change)="updateValues(input.value)">
+        <option value="{{country}}" *ngFor="let country of countriesList">{{country}}</option>
+      </select>
+    </div>
+  </div>
+  <app-dashboard-card [totalConfirmed]="totalConfirmed" [totalActive]="totalActive" [totalDeath]="totalDeath"
+    [totalRecovered]="totalRecovered"></app-dashboard-card>
 </div>
