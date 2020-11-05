@@ -5,3 +5,9 @@ export interface GlobalDataSummery {
   recoverd?: number;
   active?: number;
 }
+
+export interface DataWiseData {
+  country?: string,
+  cases?: number,
+  date?: Date
+}

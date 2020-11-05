@@ -11,4 +11,27 @@
   </div>
   <app-dashboard-card [totalConfirmed]="totalConfirmed" [totalActive]="totalActive" [totalDeath]="totalDeath"
     [totalRecovered]="totalRecovered"></app-dashboard-card>
+  <div class="card row">
+    <div class="col">
+      <google-chart [data]="lineChart"></google-chart>
+    </div>
+  </div>
+  <div class="card">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>sno.</th>
+          <th>Date</th>
+          <th>Cases</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let cs of selectedCountryData; index as i">
+          <td>{{i+1}}</td>
+          <td>{{cs.date | date}}</td>
+          <td>{{cs.cases}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </div>
